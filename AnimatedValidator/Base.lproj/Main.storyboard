@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Validator View Controller-->
@@ -14,68 +15,135 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nGp-cx-7Je">
-                                <rect key="frame" x="20" y="43" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nGp-cx-7Je">
+                                <rect key="frame" x="60" y="38" width="480" height="30"/>
                                 <accessibility key="accessibilityConfiguration" label=""/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="J5h-NG-7Ki"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <action selector="emailTextFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="ejf-cu-bPG"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gP-em-8QC">
-                                <rect key="frame" x="20" y="81" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gP-em-8QC">
+                                <rect key="frame" x="60" y="77" width="480" height="30"/>
                                 <accessibility key="accessibilityConfiguration" label=""/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NCf-v8-fD0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <action selector="confirmEmailExtFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="co8-wG-iic"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwC-GM-0Ce">
-                                <rect key="frame" x="20" y="119" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nSx-Ia-RI8">
+                                <rect key="frame" x="60" y="153" width="480" height="30"/>
                                 <accessibility key="accessibilityConfiguration" label=""/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qaX-pe-fZa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="passwordTextFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="MyB-sc-GkJ"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nSx-Ia-RI8">
-                                <rect key="frame" x="20" y="157" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQ9-B1-hJs">
+                                <rect key="frame" x="60" y="191" width="480" height="30"/>
                                 <accessibility key="accessibilityConfiguration" label=""/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nTC-Wu-EAq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="confirmPasswordTextFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="kGU-5J-0qC"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQ9-B1-hJs">
-                                <rect key="frame" x="20" y="195" width="280" height="30"/>
-                                <accessibility key="accessibilityConfiguration" label=""/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHi-Rz-uKZ">
-                                <rect key="frame" x="20" y="233" width="280" height="30"/>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHi-Rz-uKZ">
+                                <rect key="frame" x="60" y="720" width="480" height="44"/>
+                                <color key="backgroundColor" red="0.90509673810000002" green="0.90509673810000002" blue="0.90509673810000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="">
                                     <accessibilityTraits key="traits" none="YES" button="YES"/>
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="TUe-zs-JQg"/>
+                                </constraints>
                                 <state key="normal" title="Submit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwC-GM-0Ce">
+                                <rect key="frame" x="60" y="115" width="480" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label=""/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JeD-EP-9fR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
+                                <connections>
+                                    <action selector="phoneTextFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="NfT-vn-txd"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jHi-Rz-uKZ" secondAttribute="centerX" id="0hM-Kx-0wQ"/>
+                            <constraint firstItem="nSx-Ia-RI8" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.8" id="3W5-R9-YUK"/>
+                            <constraint firstAttribute="centerX" secondItem="nGp-cx-7Je" secondAttribute="centerX" id="600-Kw-zyc"/>
+                            <constraint firstItem="0gP-em-8QC" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="57" id="8Tp-Qq-aDZ"/>
+                            <constraint firstAttribute="centerX" secondItem="0gP-em-8QC" secondAttribute="centerX" id="9rO-kb-GNS"/>
+                            <constraint firstItem="CQ9-B1-hJs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="171" id="AlN-Kt-Zmh"/>
+                            <constraint firstItem="jHi-Rz-uKZ" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.8" id="EUb-hU-a6z"/>
+                            <constraint firstItem="nGp-cx-7Je" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.8" id="Hi1-f7-1jZ"/>
+                            <constraint firstItem="xwC-GM-0Ce" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="1.25" id="IQB-pz-WqQ"/>
+                            <constraint firstItem="CQ9-B1-hJs" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.8" id="O5c-t3-lHi"/>
+                            <constraint firstItem="nGp-cx-7Je" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="18" id="g4a-MA-9KV"/>
+                            <constraint firstItem="xwC-GM-0Ce" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="95" id="g9e-iz-K2B"/>
+                            <constraint firstItem="xwC-GM-0Ce" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.8" id="hjg-PS-P9c"/>
+                            <constraint firstAttribute="centerX" secondItem="xwC-GM-0Ce" secondAttribute="centerX" id="hrD-j1-uVe"/>
+                            <constraint firstAttribute="centerX" secondItem="nSx-Ia-RI8" secondAttribute="centerX" id="iQj-Br-D2A"/>
+                            <constraint firstItem="jHi-Rz-uKZ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="700" id="plG-JW-Ze0"/>
+                            <constraint firstAttribute="centerX" secondItem="CQ9-B1-hJs" secondAttribute="centerX" id="rb0-MI-SXg"/>
+                            <constraint firstItem="nSx-Ia-RI8" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="133" id="vH1-ci-FYU"/>
+                            <constraint firstItem="0gP-em-8QC" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.8" id="xPw-QS-p7p"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IQB-pz-WqQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="confirmEmailHeightConstraint" destination="NCf-v8-fD0" id="l2Y-AV-0qw"/>
+                        <outlet property="confirmEmailWidthConstraint" destination="xPw-QS-p7p" id="qul-MT-e8l"/>
+                        <outlet property="confirmPasswordHeightConstraint" destination="nTC-Wu-EAq" id="MxU-U6-3P1"/>
+                        <outlet property="confirmPasswordWidthConstraint" destination="O5c-t3-lHi" id="5bs-3k-zTj"/>
                         <outlet property="emailConfirmTextField" destination="0gP-em-8QC" id="MPO-0Z-Ypn"/>
+                        <outlet property="emailHeightConstraint" destination="J5h-NG-7Ki" id="1dr-nK-AaK"/>
                         <outlet property="emailTextField" destination="nGp-cx-7Je" id="co6-me-ILd"/>
+                        <outlet property="emailWidthConstraint" destination="Hi1-f7-1jZ" id="O6M-4k-ydi"/>
                         <outlet property="passwordConfirmTextField" destination="CQ9-B1-hJs" id="Qzh-jM-6Uz"/>
+                        <outlet property="passwordHeightConstraint" destination="qaX-pe-fZa" id="fUs-Na-vUE"/>
                         <outlet property="passwordTextField" destination="nSx-Ia-RI8" id="T7D-4f-e9B"/>
+                        <outlet property="passwordWidthConstraint" destination="3W5-R9-YUK" id="hy9-sN-Gbb"/>
+                        <outlet property="phoneHeightConstraint" destination="JeD-EP-9fR" id="eNM-gC-Y9W"/>
                         <outlet property="phoneTextField" destination="xwC-GM-0Ce" id="lhS-VS-sX8"/>
+                        <outlet property="phoneWidthConstraint" destination="hjg-PS-P9c" id="nnY-Uq-dss"/>
                         <outlet property="submitButton" destination="jHi-Rz-uKZ" id="4ng-do-283"/>
+                        <outlet property="submitButtonTopConstraint" destination="plG-JW-Ze0" id="Z2c-H4-hSd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="827" y="332"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
